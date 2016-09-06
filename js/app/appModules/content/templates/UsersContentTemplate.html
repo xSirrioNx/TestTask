@@ -1,0 +1,42 @@
+<div class="mdl-card__title">
+	<div class="left-section">
+		<button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect <%=(activeTab=='table' || !activeTab)? 'active' : ''%>"
+		        data-name="table">
+			<i class="material-icons">&#xE8EF;</i>
+		</button>
+		<button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect <%=(activeTab=='grid')? 'active' : ''%>"
+		        data-name="grid">
+			<i class="material-icons">&#xE8F0;</i>
+		</button>
+		<button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect <%=(activeTab=='groups')? 'active' : ''%>"
+		        data-name="groups">
+			<i class="material-icons">&#xE8EC;</i>
+		</button>
+	</div>
+	<div class="right-section">
+		<div class="sort-wrapper">
+			<label>Order by: </label>
+		</div>
+		<div class="search-wrapper">
+			<label>Search by: </label>
+		</div>
+	</div>
+</div>
+<div class="mdl-card__supporting-text">
+	<div class="table-wrapper <%=(activeTab=='table' || !activeTab)? 'active' : ''%>">
+		1
+	</div>
+	<div class="grid-wrapper <%=(activeTab=='grid')? 'active' : ''%>">
+		2
+	</div>
+	<div class="groups-wrapper <%=(activeTab=='groups')? 'active' : ''%>">
+		3
+	</div>
+</div>
+<div class="mdl-card__actions">
+	<div class="select-wrapper">
+
+	</div>
+	<div class="pages-wrapper"></div>
+	<div class="pagination-wrapper"></div>
+</div>

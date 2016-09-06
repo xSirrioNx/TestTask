@@ -1,0 +1,28 @@
+.grid-wrapper {
+	.mdl-grid {
+		.mdl-cell {
+			.mdl-card {
+				max-width: 100%;
+				.mdl-card__title {
+					height: 90px;
+					flex-direction: column;
+					justify-content: center;
+					h2 {
+						align-self: flex-start;
+					}
+				}
+				.mdl-card__supporting-text {
+					img {
+						width: 100%;
+					}
+					div {
+						padding: 2px 16px;
+						span:first-of-type{
+							font-weight: 600;
+						}
+					}
+				}
+			}
+		}
+	}
+}
