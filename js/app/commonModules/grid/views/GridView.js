@@ -17,7 +17,6 @@ define(["backbone",
 
 			template: _.template(GridTemplate),
 			events: {
-				"click .mdl-card__title .left-section button": "onViewTypeButtonClick"
 			},
 			tagName: "div",
 			className: "mdl-grid",

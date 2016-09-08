@@ -135,9 +135,12 @@
 		.pagination-wrapper {
 			.backgrid-paginator {
 				line-height: 0;
-				li {
-					a {
-						color: $color-accent;
+				ul {
+					> li {
+						> a {
+							color: $color-accent;
+							padding: 0 2px;
+						}
 					}
 				}
 			}

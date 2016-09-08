@@ -24,6 +24,8 @@ require.config({
         "tableView": "app/commonModules/table/views/TableView",
         "gridView": "app/commonModules/grid/views/GridView",
         "gridItemView": "app/commonModules/grid/views/GridItemView",
+        "groupsView": "app/commonModules/groups/views/GroupsView",
+        "tabView": "app/commonModules/groups/views/TabView",
 
         "selectView": "app/simpleModules/select/views/SelectView",
         "selectItemView": "app/simpleModules/select/views/SelectItemView",

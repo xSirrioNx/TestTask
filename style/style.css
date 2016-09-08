@@ -16551,8 +16551,9 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     color: rgba(0,0,0, 0.5); }
   .users-card .mdl-card__actions .pagination-wrapper .backgrid-paginator {
     line-height: 0; }
-    .users-card .mdl-card__actions .pagination-wrapper .backgrid-paginator li a {
-      color: "25,118,210"; }
+    .users-card .mdl-card__actions .pagination-wrapper .backgrid-paginator ul > li > a {
+      color: "25,118,210";
+      padding: 0 2px; }
 
 .wrapper {
   position: relative;

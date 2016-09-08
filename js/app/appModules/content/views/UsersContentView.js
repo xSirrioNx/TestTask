@@ -5,6 +5,7 @@ define(["backbone",
         "usersCollection",
         "tableView",
         "gridView",
+        "groupsView",
         "selectView",
         "inputView",
         "text!app/appModules/content/templates/UsersContentTemplate.html",
@@ -13,7 +14,8 @@ define(["backbone",
     function (Backbone,
               UsersCollection,
               TableView,
-              GreedView,
+              GridView,
+              GroupsView,
               SelectView,
               InputView,
               UsersContentTemplate) {
@@ -89,6 +91,7 @@ define(["backbone",
                 this.usersCollection.getPage(1);
             },
             onCollectionSynch: function (collection, response, options) {
+	            var self = this;
                 this.tableView = new TableView({
                     collection: this.usersCollection
                 });
@@ -106,11 +109,22 @@ define(["backbone",
                 this.makeSearchFilterCollections(collection);
                 this.renderHeader();
 
-	            this.gridView = new GreedView({
+	            this.gridView = new GridView({
 		            collection: this.usersCollection
 	            });
 	            this.$el.find(".grid-wrapper").html(this.gridView.render().el);
 	            this.gridView.makeScroll();
+
+	            this.groupsView = new GroupsView({
+		           collection: this.usersCollection
+	            });
+	            this.listenTo(this.groupsView, "tabsPrepared", function () {
+		            self.$el.find(".groups-wrapper").html(self.groupsView.render().el);
+	            });
+	            this.listenTo(this.groupsView, "all", function (e) {
+		            console.debug(e);
+	            });
+
 
                 componentHandler.upgradeDom();
             },
